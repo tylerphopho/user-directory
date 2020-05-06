@@ -30,7 +30,7 @@ export default class Add extends Component {
         }else if (!this.state.email){
             alert("Please enter an email address.")
         }else if(!this.state.position){
-            alert("Please eneter a position.")
+            alert("Please enter a position.")
         }else{
             alert("Employee added!")
         }
@@ -41,7 +41,7 @@ export default class Add extends Component {
             position: this.state.position
         };
         console.log(employee);
-        axios.post("http://tylerphopho-employee-directory.herokuapp.com/api/employees", employee)
+        axios.post("https://tylerphopho-user-direct.heroku.app/api/employees", employee)
         .then(res => console.log(res.data));
     }
     componentDidMount(){
@@ -62,27 +62,27 @@ export default class Add extends Component {
                                 <form className="col s12 form">
                                     
                                     <div className="input-field col s6">
-                                    <input value={this.state.firstName} id="first_name" type="text" className="validate"/>
+                                    <input onChange={this.handleInputeChage} value={this.state.firstName} name="firstName" type="text" className="validate"/>
                                     <label htmlFor="first_name" >First Name</label>
                                     </div>
                                     
                                     <div className="input-field col s6">
-                                    <input value={this.state.lastName} id="last_name" type="text" className="validate"/>
+                                    <input onChange={this.handleInputeChage} value={this.state.lastName} name="lastName" type="text" className="validate"/>
                                     <label htmlFor="last_name" >Last Name</label>
                                     </div>
                                     
                                     <div className="row">
                                         <div className="input-field col s6">
-                                            <input value={this.state.email} id="email" type="email" className="validate"/>
+                                            <input onChange={this.handleInputeChage} value={this.state.email} name="email" type="email" className="validate"/>
                                             <label htmlFor="email">Email</label>
                                         </div>
                                         <div className="input-field col s6">
-                                            <input value={this.state.position} id="postion" type="text" className="validate"/>
+                                            <input onChange={this.handleInputeChage} value={this.state.position} name="position" type="text" className="validate"/>
                                             <label htmlFor="position">Employee Positon</label>
                                         </div>
                                     </div>
                                 </form>
-                                </div>
+                                </div>      
                                 <button onClick={this.handleFormSubmit} className="btn waves-effect waves-light" type="submit">Add</button>
                             </span>
                         </div>
