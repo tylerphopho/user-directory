@@ -39,7 +39,7 @@ updateSearch(event){
         this.setState({
             employees: this.state.employees.filter((_id) => id !== id)
         })
-    }
+    }   
 
     employeeList(){
             let filteredEmployee = this.state.employees.filter(
