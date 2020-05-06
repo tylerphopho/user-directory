@@ -7,6 +7,7 @@ const Employee = props => (
         <td>{props.employees.employee.lastName}</td>
         <td>{props.employees.employee.email}</td>
         <td>{props.employees.employee.position}</td>
+        <td><a href="youtube.com" onClick={() => {props.removeEmployee(props.employees._id)}}>DELETE</a></td>
     </tr>
 )
 
@@ -29,7 +30,8 @@ updateSearch(event){
         axios.get("https://user-employee-dir.herokuapp.com/api/employees")
         .then(res => {
             this.setState({employees: res.data})
-        }).catch((error) => {
+        })
+        .catch((error) => {
             console.log(error)
         })
     }
@@ -58,10 +60,9 @@ updateSearch(event){
         return (
             <div>
                 <div className="container">
-                    <br></br>
                     <form className="col s12">
                         <div className="col s12">
-                            <input placeholder="Search Filter" id="search" type="text" value={this.state.search} onChange={this.updateSearch.bind(this)}/>
+                            <input placeholder="Search Filter" type="text" value={this.state.search} onChange={this.updateSearch.bind(this)}/>
                             <label htmlFor="search">Search directory by first/last name, email, or position</label>
                         </div>
                     </form>

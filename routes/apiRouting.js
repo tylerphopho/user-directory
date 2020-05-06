@@ -27,4 +27,11 @@ router.route("/api/employees").get((req,res) => {
         .then(employees => res.json(employees))
         .catch(err => res.status(400).json(`Error:${err}`));
 });
+
+//Deletes an Employee(Delete)
+router.route("/api/employees/:id").delete((req, res) =>{
+    Employee.findByIdAndDelete(req.params.id)
+        .then(() => res.json("Employee Deleted!"))
+        .catch(err => res.status(400).json(`Error:${err}`));
+});
 module.exports = router;
