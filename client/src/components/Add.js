@@ -72,14 +72,18 @@ export default class Add extends Component {
                                     </div>
                                     
                                     <div className="row">
+                                    <div className="col s12">
+
                                         <div className="input-field col s6">
-                                            <input onChange={this.handleInputeChage} value={this.state.email} name="email" type="email" className="validate"/>
-                                            <label htmlFor="email">Email</label>
+                                        <input onChange={this.handleInputeChage} value={this.state.email} name="email" type="email" className="validate"/>
+                                        <label htmlFor="email">Email</label>
                                         </div>
+                                        
                                         <div className="input-field col s6">
-                                            <input onChange={this.handleInputeChage} value={this.state.position} name="position" type="text" className="validate"/>
-                                            <label htmlFor="position">Employee Positon</label>
+                                        <input onChange={this.handleInputeChage} value={this.state.position} name="position" type="text" className="validate"/>
+                                        <label htmlFor="position">Employee Positon</label>
                                         </div>
+                                    </div>
                                     </div>
                                 </form>
                                 </div>      
