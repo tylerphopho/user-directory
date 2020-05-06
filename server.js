@@ -22,7 +22,7 @@ if(process.env.NODE_ENV === "production") {
 //     res.sendFile(path.join(__dirname, "/client/public/index.html"));
 //   });
 
-mongoose.connect(process.env.MONGODB_URI || "localhost/",{
+mongoose.connect(process.env.MONGODB_URI || "mongodb://tylerphopho:password1@ds157956.mlab.com:57956/heroku_p511ll3s",{
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useFindAndModify: false

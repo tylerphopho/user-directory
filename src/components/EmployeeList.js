@@ -7,7 +7,6 @@ const Employee = props => (
         <td>{props.employees.employee.lastName}</td>
         <td>{props.employees.employee.email}</td>
         <td>{props.employees.employee.position}</td>
-        <td><a href="#" onClick={() => {props.removeEmployee(props.employees._id)}}>Delete</a></td>
     </tr>
 )
 
@@ -45,7 +44,7 @@ updateSearch(event){
     employeeList(){
             let filteredEmployee = this.state.employees.filter(
             (employee) => {
-                return employee.employee.firstName.toLowerCase().indexOf(this.state.search.toLowerCase() != -1)
+                return employee.employee.firstName.toLowerCase().indexOf(this.state.search.toLowerCase() !== -1)
                 || employee.employee.lastName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
                 || employee.employee.email.toLowerCase().indexOf(this.state.search.toLowerCase()) !==-1
                 || employee.employee.position.toLowerCase().indexOf(this.state.search.toLowerCase()) !==-1;
