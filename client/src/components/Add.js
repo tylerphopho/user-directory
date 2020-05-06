@@ -47,7 +47,7 @@ export default class Add extends Component {
     componentDidMount(){
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.collapsible');
-            var instances = M.Collapsible.init(elems, {});
+            M.Collapsible.init(elems, {});
           });
     }
     render() {
