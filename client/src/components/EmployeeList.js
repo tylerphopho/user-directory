@@ -21,6 +21,7 @@ export default class EmployeeList extends Component {
     }
 
 updateSearch(event){
+    event.preventDefault();
     this.setState({search: event.target.value})
     console.log(event.target.value)
 }
