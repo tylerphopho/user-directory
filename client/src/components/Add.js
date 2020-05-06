@@ -41,7 +41,7 @@ export default class Add extends Component {
             position: this.state.position
         };
         console.log(employee);
-        axios.post("https://tylerphopho-user-direct.heroku.app/api/employees", employee)
+        axios.post("http://localhost:3001/api/employees", employee)
         .then(res => console.log(res.data));
     }
     componentDidMount(){

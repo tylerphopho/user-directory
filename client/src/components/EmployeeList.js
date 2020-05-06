@@ -21,12 +21,11 @@ export default class EmployeeList extends Component {
     }
 
 updateSearch(event){
-    event.preventDefault();
     this.setState({search: event.target.value})
     console.log(event.target.value)
 }
     componentDidMount(){
-        axios.get("https://tylerphopho-employee-directory.herokuapp.com/api/employees")
+        axios.get("http://localhost:3001/api/employees")
         .then(res => {
             this.setState({employees: res.data})
         }).catch((error) => {

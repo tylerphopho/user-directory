@@ -1,3 +1,3 @@
 module.exports = {
-    Employee: require("./Employee.models")
+    Employee: require("./Employee")
 };

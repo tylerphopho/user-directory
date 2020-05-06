@@ -21,5 +21,10 @@ router.route("/api/employees").post((req, res) => {
     .catch(err => res.status(400).json(`Error:${err}`));
 });
 
-
+//Finds all Employees (Read)
+router.route("/api/employees").get((req,res) => {
+    Employee.find({})
+        .then(employees => res.json(employees))
+        .catch(err => res.status(400).json(`Error:${err}`));
+});
 module.exports = router;

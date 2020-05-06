@@ -33,7 +33,7 @@ const employeeSchema = new Schema({
         position: {
             type: String,
             required: true
-        },
+        }
     }
 });
 
