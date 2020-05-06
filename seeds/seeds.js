@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models")
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://tylerphopho:password1@ds335678.mlab.com:35678/heroku_fqqm362w",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://tylerphopho:password1@ds125578.mlab.com:25578/heroku_pdnwd75r",
  { useNewUrlParser: true}
  );
 
