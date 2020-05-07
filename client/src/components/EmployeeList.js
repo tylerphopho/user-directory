@@ -27,7 +27,7 @@ updateSearch(event){
     console.log(event.target.value)
 }
     componentDidMount(){
-        axios.get("https://user-employee-dir.herokuapp.com/api/employees")
+        axios.get("http://localhost:3001/api/employees")
         .then(res => {
             this.setState({employees: res.data})
         })
