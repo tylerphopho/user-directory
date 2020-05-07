@@ -22,6 +22,13 @@ app.get("*", function(req, res) {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 
+
+app.use("/", apiRouting);
+
+app.listen(PORT, () => {
+    console.log(`Currently listening to http:localhost:${PORT}`)
+});
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://tylerphopho:password1@ds125578.mlab.com:25578/heroku_pdnwd75r",{
     useUnifiedTopology: true,
     useNewUrlParser: true,
@@ -29,7 +36,3 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://tylerphopho:password1@ds1
 },
 () => console.log("Connected to MongoDB!")
 );
-app.use("/", apiRouting);
-app.listen(PORT, () => {
-    console.log(`Currently listening to http:localhost:${PORT}`)
-});
